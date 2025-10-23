@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       return null;
     }
   });
-
+//
   
   useEffect(() => {
     if (user) {
