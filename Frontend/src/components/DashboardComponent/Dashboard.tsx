@@ -103,7 +103,7 @@ const DashboardComponent: React.FC = () => {
     <div className={styles.container}>
       {/* Header */}
       <div className={styles.header}>
-        <h1 className={styles.title}>Your Projects</h1>
+        <h1 className={styles.title}>Project Management Tool</h1>
         <button className={styles.addBtn} onClick={handleAddbtn}>
           <Plus size={18} /> Add Project
         </button>
