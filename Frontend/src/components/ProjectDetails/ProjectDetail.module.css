@@ -1,0 +1,327 @@
+.container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #e5e7eb;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+.backBtn:hover {
+  background-color: #d1d5db;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  color: #2563eb;
+}
+
+/* Info Card */
+.infoCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.description {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 0.6rem;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+.date span {
+  color: #111827;
+  font-weight: 500;
+}
+
+/* Tasks */
+.tasksSection {
+  margin-top: 1.5rem;
+}
+
+.tasksTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tasksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.taskCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.3s;
+}
+.taskCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskHeader h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.statusBadge {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.completed {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.inProgress {
+  background-color: #fef9c3;
+  color: #a16207;
+}
+
+.pending {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.taskDesc {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.4rem;
+}
+
+/* States */
+.loading,
+.empty,
+.noTasks {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 2rem;
+}
+.tasksHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.createBtn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.3s;
+  margin-left: 40px;
+}
+
+.createBtn:hover {
+  background-color: #1e40af;
+}
+
+/* Table */
+.taskTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.taskTable th,
+.taskTable td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.taskTable th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.actionCell {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editBtn,
+.deleteBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.editBtn:hover {
+  background-color: #e0f2fe;
+}
+
+.deleteBtn:hover {
+  background-color: #fee2e2;
+}
+
+/* Status Badges */
+.statusBadge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+}
+
+.completed {
+  background-color: #16a34a;
+}
+
+.inProgress {
+  background-color: #f59e0b;
+}
+
+.pending {
+  background-color: #9ca3af;
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cancelBtn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  background-color: #f3f4f6;
+  cursor: pointer;
+}
+
+.confirmBtn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+
+.confirmBtn:hover {
+  background-color: #dc2626;
+}
+
+.deleteBtn {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f87171;
+  color: white;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background-color: #ef4444;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.backBtn {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.backBtn:hover {
+  background-color: #f3f3f3;
+}
+
